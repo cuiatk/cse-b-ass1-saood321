@@ -15,7 +15,14 @@ public class TurtleSoup {
      * @param sideLength length of each side
      */
     public static void drawSquare(Turtle turtle, int sideLength) {
-        throw new RuntimeException("implement me!");
+    	
+    	for(int i=1;i<5;i++)
+    	{
+    		turtle.forward(sideLength);
+    		turtle.turn(90);
+    	}
+       
+        
     }
 
     /**
@@ -27,8 +34,18 @@ public class TurtleSoup {
      * @param sides number of sides, where sides must be > 2
      * @return angle in degrees, where 0 <= angle < 360
      */
+    	
     public static double calculateRegularPolygonAngle(int sides) {
+    	double angle;
+    	if(sides>2)
+    	{
+    	angle=(sides-2)*180/sides;
+    	return angle;
+    	}
+    	else
+    	{
         throw new RuntimeException("implement me!");
+    	}
     }
 
     /**
@@ -41,8 +58,21 @@ public class TurtleSoup {
      * @param angle size of interior angles in degrees, where 0 < angle < 180
      * @return the integer number of sides
      */
-    public static int calculatePolygonSidesFromAngle(double angle) {
+    public static int calculatePolygonSidesFromAngle(int angle) {
+    	int sides=0;
+    	int num1;
+    	if(angle>0 && angle<180)
+    	{
+    		 num1=180-angle;
+    		 sides=360/num1;
+    		 
+    		 
+    		return sides;
+    	}
+    	else
+    	{
         throw new RuntimeException("implement me!");
+    	}
     }
 
     /**
@@ -55,7 +85,13 @@ public class TurtleSoup {
      * @param sideLength length of each side
      */
     public static void drawRegularPolygon(Turtle turtle, int sides, int sideLength) {
-        throw new RuntimeException("implement me!");
+    	
+    	for (int i=1;i<=sides;i++)
+    	{
+    		turtle.forward(sideLength);
+    		turtle.turn(120);
+    	}
+        
     }
 
     /**
@@ -109,8 +145,128 @@ public class TurtleSoup {
      * @param turtle the turtle context
      */
     public static void drawPersonalArt(Turtle turtle) {
-        throw new RuntimeException("implement me!");
-    }
+    	
+    	
+    	for(int j=0;j<4;j++)
+    	{
+    		turtle.forward(200);
+    		turtle.turn(90);
+    		turtle.color(PenColor.BLUE);
+    	}
+    	
+    	for(int i=0;i<2;i++)
+    	{
+    		turtle.forward(190);
+    		turtle.turn(90);
+    		turtle.color(PenColor.CYAN);
+    	}
+    	for(int i=0;i<2;i++)
+    	{
+    		turtle.forward(180);
+    		turtle.turn(90);
+    		turtle.color(PenColor.GRAY);
+    	}
+    	for(int i=0;i<2;i++)
+    	{
+    		turtle.forward(170);
+    		turtle.turn(90);
+    		turtle.color(PenColor.GREEN);
+    	}
+    	for(int i=0;i<2;i++)
+    	{
+    		turtle.forward(160);
+    		turtle.turn(90);
+    		turtle.color(PenColor.MAGENTA);
+    	}
+    	for(int i=0;i<2;i++)
+    	{
+    		turtle.forward(150);
+    		turtle.turn(90);
+    		turtle.color(PenColor.ORANGE);
+    	}
+    	for(int i=0;i<2;i++)
+    	{
+    		turtle.forward(140);
+    		turtle.turn(90);
+    		turtle.color(PenColor.PINK);
+    	}
+    	for(int i=0;i<2;i++)
+    	{
+    		turtle.forward(130);
+    		turtle.turn(90);
+    		turtle.color(PenColor.RED);
+    	}
+    	for(int i=0;i<2;i++)
+    	{
+    		turtle.forward(120);
+    		turtle.turn(90);
+    		turtle.color(PenColor.YELLOW);
+    	}
+    	for(int i=0;i<2;i++)
+    	{
+    		turtle.forward(110);
+    		turtle.turn(90);
+    		turtle.color(PenColor.BLUE);
+    	}
+    	for(int i=0;i<2;i++)
+    	{
+    		turtle.forward(100);
+    		turtle.turn(90);
+    		turtle.color(PenColor.CYAN);
+    	}
+    	for(int i=0;i<2;i++)
+    	{
+    		turtle.forward(90);
+    		turtle.turn(90);
+    		turtle.color(PenColor.GRAY);
+    	}
+    	for(int i=0;i<2;i++)
+    	{
+    		turtle.forward(80);
+    		turtle.turn(90);
+    		turtle.color(PenColor.ORANGE);
+    	}
+    	for(int i=0;i<2;i++)
+    	{
+    		turtle.forward(70);
+    		turtle.turn(90);
+    		turtle.color(PenColor.RED);
+    	}
+    	for(int i=0;i<2;i++)
+    	{
+    		turtle.forward(60);
+    		turtle.turn(90);
+    		turtle.color(PenColor.PINK
+    				);
+    	}
+    	for(int i=0;i<2;i++)
+    	{
+    		turtle.forward(50);
+    		turtle.turn(90);
+    		turtle.color(PenColor.BLUE);
+    	}
+    	for(int i=0;i<2;i++)
+    	{
+    		turtle.forward(40);
+    		turtle.turn(90);
+    		turtle.color(PenColor.ORANGE);
+    	}
+    	for(int i=0;i<2;i++)
+    	{
+    		turtle.forward(30);
+    		turtle.turn(90);
+    		turtle.color(PenColor.BLACK);
+    	}
+    	for(int i=0;i<5;i++)
+    	{
+    		turtle.forward(30);
+    		turtle.turn(150);
+    		turtle.color(PenColor.GREEN);
+    	}
+    	
+    	
+    	}
+    
 
     /**
      * Main method.
@@ -121,11 +277,15 @@ public class TurtleSoup {
      */
     public static void main(String args[]) {
         DrawableTurtle turtle = new DrawableTurtle();
-
-        drawSquare(turtle, 40);
-
-        // draw the window
+        drawPersonalArt(turtle);
+        
+        drawSquare(turtle, 80);
+        //drawRegularPolygon(turtle, 3,100);
+        System.out.println(calculateRegularPolygonAngle(3));
+        
+        System.out.println(calculatePolygonSidesFromAngle(165));
         turtle.draw();
+        
     }
 
 }

@@ -35,9 +35,9 @@ public class TurtleSoupTest {
      */
     @Test
     public void calculatePolygonSidesFromAngleTest() {
-        assertEquals(3, TurtleSoup.calculatePolygonSidesFromAngle(60.0));
-        assertEquals(7, TurtleSoup.calculatePolygonSidesFromAngle(128.57));
-        assertEquals(5, TurtleSoup.calculatePolygonSidesFromAngle(108.0));
+        assertEquals(3, TurtleSoup.calculatePolygonSidesFromAngle(60));
+        assertEquals(7, TurtleSoup.calculatePolygonSidesFromAngle(128));
+        assertEquals(5, TurtleSoup.calculatePolygonSidesFromAngle(108));
 
     }
 
